@@ -5,7 +5,7 @@ import click
 
 @click.command()
 def cli():
-    print("Hello.")
+    print("Hello!")
 
 
 if __name__ == "__main__":
