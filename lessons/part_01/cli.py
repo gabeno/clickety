@@ -5,9 +5,12 @@ import click
 
 @click.command()
 @click.argument("name", nargs=-1)
-def cli(name):
+@click.option("--greeting", "-g", default="Hello")
+@click.option("--question/--no-question", default=False)
+def cli(name, greeting, question):
+    punctuation = "?" if question else "!"
     for n in name:
-        print(f"Hello, {n}!")
+        print(f"{greeting}, {n}{punctuation}")
 
 
 if __name__ == "__main__":
