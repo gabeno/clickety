@@ -4,8 +4,10 @@ import click
 
 
 @click.command()
-def cli():
-    print("Hello!")
+@click.argument("name", nargs=-1)
+def cli(name):
+    for n in name:
+        print(f"Hello, {n}!")
 
 
 if __name__ == "__main__":
