@@ -3,9 +3,10 @@
 import click
 
 
-@click.option("--red", is_flag=True)
 @click.command()
+@click.option("--red", is_flag=True)
 def cli(red):
+    print("Hello!")
     click.echo("Printing...", err=True)
 
     color = "red" if red else None
